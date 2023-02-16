@@ -1,0 +1,91 @@
+.pagination>.page-item.active>span {
+    color: white;
+}
+
+th {
+    background-color: #163485 !important;
+    color: #fff;
+}
+
+.bg-progress {
+    --bs-bg-opacity: 1;
+    background-color: #004ba0 !important;
+}
+
+.bg-canceled {
+    --bs-bg-opacity: 1;
+    background-color: #ff0000 !important;
+}
+
+.bg-approved {
+    --bs-bg-opacity: 1;
+    background-color: #163485 !important;
+}
+
+.bg-pending {
+    --bs-bg-opacity: 1;
+    background-color: #ffa500 !important;
+}
+
+.bg-payment {
+    --bs-bg-opacity: 1;
+    background-color: #7367f0 !important;
+}
+
+.breadcrumb {
+    font-size: small !important;
+    padding-top: 5px !important;
+    padding-bottom: 0 !important;
+}
+
+.navigation-main>.nav-item:not(.active):not(.sidebar-group-active):hover>a {
+    color: #163485 !important;
+    background-color: rgba(38, 160, 0, 0.12);
+}
+
+.navigation-main>.nav-item .menu-content .nav-item:not(.active):hover>a {
+    color: #163485 !important;
+    background-color: rgba(38, 160, 0, 0.12);
+}
+
+.dropdown-item.active>svg,
+.dropdown-item:active>svg {
+    color: #fff !important;
+}
+
+.swal2-styled.swal2-confirm {
+    background-color: #163485 !important;
+}
+
+.swal2-styled:focus,
+.swal2-styled:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.dt-checkboxes-select-all {
+    padding-top: 7px !important;
+    padding-bottom: 0 !important;
+}
+
+.profile-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/banner2.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80vh;
+    margin-top: -43px;
+}
+
+.responsive-img {
+    max-width: 100%;
+    width: 4000px;
+    height: auto;
+}
+
+.responsive-img-content {
+    max-width: 100%;
+    width: 2000px;
+    height: auto;
+}

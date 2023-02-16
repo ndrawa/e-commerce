@@ -1,0 +1,36 @@
+version: "2"
+
+networks:
+    network-e-commerce:
+        driver: bridge
+
+services:
+    db:
+        image: postgres
+        container_name: ${APP_NAME}_postgres
+        restart: unless-stopped
+        ports:
+            - "5433:5432"
+        environment:
+            POSTGRES_USER: ${DB_USERNAME}
+            POSTGRES_PASSWORD: ${DB_PASSWORD}
+            POSTGRES_DB: ${DB_DATABASE}
+            POSTGRES_HOST_AUTH_METHOD: "trust"
+        networks:
+            - network-e-commerce
+
+    e-commerce:
+        image: "pentestingid/php:8.1-oci"
+        depends_on:
+            - db
+        container_name: e-commerce
+        networks:
+            - network-e-commerce
+        user: "1000:1000"
+        ports:
+            - 0.0.0.0:8000:8000
+        environment:
+            - DOMAIN=savira.xyz
+        volumes:
+            - ./:/var/www/html
+        restart: unless-stopped
